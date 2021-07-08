@@ -38,7 +38,7 @@ export default class Aside extends React.Component{
                                 <div className="list-in">
                                     <ul className="main-list">
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <span className="dashboard-icon"><FaTachometerAlt /></span>
                                                 <span className="list-name">Dashboard</span>
                                             </a>
