@@ -5,16 +5,16 @@ export default function Sign(){
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
 
-    const showPassword = (event) => {
-        var password;
-        if(event.target.nextSibling.id === "Password"){
-            password = document.getElementById("Password");
+    const signInshowPassword = (event) => {
+        var _signpassword;
+        if(event.target.nextSibling.id === "password"){
+            _signpassword = document.getElementById("password");
         }
         else{
-            password = document.getElementById("re-Password");
+            _signpassword = document.getElementById("re-Password");
         }
-        const _type = password.getAttribute("type") === "password" ? "text" : "password";
-        password.setAttribute("type",_type);
+        const _type = _signpassword.getAttribute("type") === "password" ? "text" : "password";
+        _signpassword.setAttribute("type",_type);
         event.target.classList.toggle("show");
     }
 
@@ -42,14 +42,14 @@ export default function Sign(){
                             <label htmlFor="password">
                                <span>Create New Password</span>
                             </label>
-                            <span className="eye-icon" onClick={showPassword}></span>
+                            <span className="eye-icon" onClick={signInshowPassword}></span>
                             <input id="password" {...register("newpassword", { required: true, maxLength:10 })} type="password" placeholder="Enter Password" name="newpassword" />
                         </div>
                         <div className="inline-form sign">
                             <label htmlFor="re-Password">
                                <span>Re-Enter Password</span>
                             </label>
-                            <span className="eye-icon" onClick={showPassword}></span>
+                            <span className="eye-icon" onClick={signInshowPassword}></span>
                             <input id="re-Password" {...register("repassword", { required: true, maxLength:10 })} type="password" placeholder="Enter Re-Password" name="repassword" />
                         </div>
                         <div className="inline-form-btn">

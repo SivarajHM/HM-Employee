@@ -7,10 +7,10 @@ export default function Login(){
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
 
-    const showPassword = (event) => {
-        var password = document.getElementById("password");
-        const _type = password.getAttribute("type") === " password" ? "text" : "password";
-        password.setAttribute("type",_type);
+    const showLoginPassword = (event) => {
+        var _login_password = document.getElementById("password-login");
+        const _type = _login_password.getAttribute("type") === "password" ? "text" : "password";
+        _login_password.setAttribute("type",_type);
         event.target.classList.toggle("show");
     }
 
@@ -30,12 +30,12 @@ export default function Login(){
                             <input id="username" {...register("username")} placeholder="Enter Username" name="username" />
                         </div>
                         <div className="inline-form">
-                            <label htmlFor="password">
+                            <label htmlFor="password-login">
                                 <span>Password</span>
                             </label>
                             <span className="login-icons password"></span>
-                            <span className="eye-icon" onClick={showPassword}></span>
-                            <input id="password" {...register("password", { required: true })} type="password" placeholder="Enter Password" name="password" />
+                            <span className="eye-icon" onClick={showLoginPassword}></span>
+                            <input id="password-login" {...register("password", { required: true })} type="password" placeholder="Enter Password" name="password" />
                             {errors.exampleRequired && <span>This field is required</span>}
                         </div>
                         <div className="inline-form reminder">
