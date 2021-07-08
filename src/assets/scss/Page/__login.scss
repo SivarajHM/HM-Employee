@@ -7,7 +7,7 @@
     .login-diplay{
         display: $__flex;
         justify-content: $__center;
-        padding-top: 10%;
+        padding-top: 7%;
         @include respond-below(custom767) {
             flex-wrap: $__wrap;
             padding-top: 0;

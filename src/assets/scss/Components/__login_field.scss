@@ -144,6 +144,14 @@
                 }
             }
         }
+        .signin-link{
+            a{
+                font-size: $__font__size__15;
+                color: $__black;
+                font-family: $__roboto__regular;
+                text-decoration: $__none;
+            }
+        }
     }
 }
 .display-section{

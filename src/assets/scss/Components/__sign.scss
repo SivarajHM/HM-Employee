@@ -1,15 +1,16 @@
 .sign-container{
-    max-width: $__half__width;
+    max-width: 30%;
     margin: 0 $__auto;
-    padding: 5% 0px 0px 0px;
+    padding: 2% 0px 0px 0px;
+    position: $__relative;
     @include respond-below(custom1280){
-        max-width: $__half__width;
+        max-width: $__half__width
     }
     @include respond-below(custom1200){
-        max-width: 75%;
+        max-width: $__half__width;
     }
     @include respond-below(lg){
-        max-width: 75%;
+        max-width: 65%;
     }
     @include respond-below(custom767){
         max-width: $__full__width;
@@ -164,6 +165,17 @@
                         color: $__white;
                         background-image: linear-gradient(230deg, #6373bc 20%, #ce62b0 48%, #fc7b7f 100%);
                     }
+                }
+            }
+            .login-link{
+                padding: 25px 15px;
+                padding-bottom: 0;
+                text-align: $__right;
+                a{
+                    font-size: $__font__size__15;
+                    color: $__black;
+                    font-family: $__roboto__regular;
+                    text-decoration: $__none;
                 }
             }
         }
