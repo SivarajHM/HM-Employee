@@ -1,0 +1,218 @@
+@import "../utils/__variables";
+
+$breakpoints: (
+  xs: 320px,
+  sm: 568px,
+  custom767: 767px,
+  md: 768px,
+  custom1024: 1024px,
+  lg: 1023px,
+  custom1200: 1200px,
+  custom1280: 1280px,
+  custom1400: 1400px
+);
+
+// Respond above.
+@mixin respond-above($breakpoint) {
+
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    // Write the media query.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+// Respond above.
+@mixin respond-below($breakpoint) {
+
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    // Write the media query.
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+
+// Transform properties
+@mixin transform($__property) {
+  -webkit-transform: $__property;
+  -ms-transform: $__property;
+  transform: $__property;
+}
+
+// Define vertical, horizontal, or both position
+@mixin position-alignment($__position) {
+  position: $__absolute;
+  
+  @if $__position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  @else if $__position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+  @else if $__position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Transition properties
+@mixin transition($__property) {
+  -webkit-transition: $__property;
+  -ms-transition: $__property;
+  transition: $__property;
+}
+
+// Background properties
+@mixin background-properties($__cover:cover,$__no-repeat:no-repeat,$__center:center){
+  background-size:$__cover;
+  background-repeat:$__no-repeat;
+  background-position:$__center;
+}
+
+// Position
+@mixin position($__position_value,$__top_value,$__right_value,$__bottom_value,$__left_value){
+  position:$__position_value;
+  top:$__top_value;
+  right:$__right_value;
+  bottom:$__bottom_value;
+  left:$__left_value;
+}
+
+// Margin and padding
+@mixin margin-padding($__margin, $__padding) {
+   margin: $__margin;
+   padding:$__padding;
+}
+
+// Border radius
+@mixin border-radius($__radius) {
+  -webkit-border-radius: $__radius;
+  -moz-border-radius: $__radius;
+  -ms-border-radius: $__radius;
+  border-radius: $__radius;
+}
+
+// Text Shortening
+@mixin ellipsis() {
+  overflow: $__hidden;
+  white-space: $__nowrap;
+  text-overflow:$__ellipsis;
+}
+
+// Word Wrapping
+@mixin word-wrap() {
+  -ms-word-break: $__break__all;
+  word-break: $__break__all;
+  word-break: $__break__word;
+  -webkit-hyphens: $__auto;
+  -moz-hyphens: $__auto;
+  hyphens: $__auto;
+}
+
+//Box-sizing
+@mixin box-sizing($__type){
+  -webkit-box-sizing:$__type;
+  -moz-box-sizing:$__type;
+  box-sizing:$__type;
+}
+
+//Box-shadow
+@mixin box-shadow( $__horizontaloffset:10px,$__verticaloffset:10px,$blur:10px,$__spread:10px,$__color: #000000 ) {
+  -webkit-box-shadow: $__horizontaloffset $__verticaloffset $blur $__spread $__color;
+  -moz-box-shadow: $__horizontaloffset $__verticaloffset $blur $__spread $__color;
+  box-shadow: $__horizontaloffset $__verticaloffset $blur $__spread $__color;
+}
+
+//Arrow with Four Optional Directions
+@mixin arrow($__direction: down, $__size: 5px, $__color: #555) {
+   width: 0;
+   height: 0;
+   @if ($__direction == left) {
+      border-top: $__size solid transparent;
+      border-bottom: $__size solid transparent; 
+      border-right: $__size solid $__color;
+   }
+   @else if ($__direction == right) {
+      border-top: $__size solid transparent;
+      border-bottom: $__size solid transparent; 
+      border-left: $__size solid $__color;
+   }
+   @else if ($__direction == down) {
+      border-left: $__size solid transparent;
+      border-right: $__size solid transparent;
+      border-top: $__size solid $__color;
+   }
+   @else {
+      border-left: $__size solid transparent;
+      border-right: $__size solid transparent;
+      border-bottom: $__size solid $__color;
+   }
+}
+
+// Extends 
+%equal-heights {
+  display: $__flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+%flex-align-center{
+  display: $__flex;
+  display: -webkit-flex;
+  align-items:$__center;
+  -webkit-align-items:$__center;
+  justify-content: $__center;
+  -webkit-justify-content: $__center;
+}
+
+%clear{
+  content:"";
+  display:$__table;
+  clear:$__both;
+}
+
+%ul_reset{
+  list-style:$__none;
+  padding:0;
+  margin:0;
+}
+
+%full_width_height_div{
+  width:$__full__width;
+  height:$__full__height;
+}

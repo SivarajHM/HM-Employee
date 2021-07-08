@@ -1,0 +1,8 @@
+.sign-page{
+    max-width: $__full__width;
+    height: calc(100vh);
+    background: url('../../images/login-bg.png') no-repeat;
+    background-position: $__center;
+    background-size: $__cover;
+    padding-top: 56px;
+}

@@ -1,0 +1,43 @@
+header{
+    max-width: $__full__width;
+    margin: 0 $__auto;
+    padding: 15px 15px;
+    width: $__full__width;
+    //position: $__fixed;
+    background-color: #4f5fb2;
+    z-index: 1000;
+    .header-fx{
+        display: $__flex;
+        align-items: $__center;
+        a{
+            margin:  0px 25px;
+            display: $__block;
+            text-decoration: $__none;
+            font-size: $__font__size__15;
+            font-family: $__roboto__regular;
+            color: $__white;
+        }
+        .logo-section{
+            display: $__flex;
+            justify-content: space-between;
+            align-items: $__center;
+            width: 16%;
+                a{
+                    display: $__block;
+                    height: 50px;
+                    margin: 0;
+                }
+                button{
+                    outline: $__none;
+                    border: $__none;
+                    display: $__block;
+                    width: 30px;
+                    height: 30px;
+                    background: url('../../images/menu.png') no-repeat;
+                    background-position: $__center;
+                    background-size: $__contain;
+                    cursor: $__pointer;
+                }
+        }
+    }
+}

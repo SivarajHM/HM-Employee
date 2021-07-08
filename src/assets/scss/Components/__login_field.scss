@@ -1,0 +1,207 @@
+.login-wrapper{
+    background-color: $__white;
+    flex: 0 0 25%;
+    @include respond-below(custom1024){
+        flex: 0 0 35%;
+        padding-top: 30px;
+    }
+    @include respond-below(lg){
+        flex: 0 0 35%;
+        padding-top: 30px;
+    }
+    @include respond-below(custom767){
+        flex: 0 0 100%;
+        padding-top: 5px;
+    }
+    .login-page{
+        padding: 50px;
+        @include respond-below(custom1200){
+            padding: 50px 25px;
+        }
+        @include respond-below(lg){
+            padding: 50px 25px;
+        }
+        @include respond-below(custom767){
+            padding: 25px 15px;
+        }
+        .form-head{
+            margin-bottom: 30px;
+            h3{
+                font-size: $__font__size__30+5;
+                font-family: $__roboto__bold;
+                text-transform: $__uppercase;
+                font-weight: 700;
+                text-align: $__center;
+                padding: 15px 0px;
+                color: #766ce7;
+                @include respond-below(lg){
+                    font-size: $__font__size__30
+                }
+                @include respond-below(custom767){
+                    font-size: $__font__size__20+5;
+                }
+            }
+        }
+        form{
+            .inline-form{
+                padding-bottom: 25px;
+                position: $__relative;
+                label{
+                    display: $__block;
+                    padding-bottom: 15px;
+                    span{
+                        font-size: $__font__size__16;
+                        font-family: $__roboto__medium;
+                        text-transform: $__uppercase;
+                        color: #766ce7;
+                    }
+                }
+                .login-icons{
+                    display: $__block;
+                    width: 20px;
+                    height: 20px;
+                    position: $__absolute;
+                    top: 45px;
+                    margin-left: 10px;
+                }
+                .user{
+                    background: url('../../images/user.png') no-repeat;
+                    background-position: $__center;
+                    background-size: $__contain;
+                }
+                .password{
+                    background: url('../../images/lock.png') no-repeat;
+                    background-position: $__center;
+                    background-size: $__contain;
+                }
+                .eye-icon{
+                    display: $__block;
+                    width: 20px;
+                    height: 20px;
+                    background: url('../../images/hide.png') no-repeat;
+                    background-position: $__center;
+                    background-size: $__contain;
+                    position: $__absolute;
+                    top: 46px;
+                    right: 15px;
+                    cursor: $__pointer;
+                }
+                .show{
+                    display: $__block;
+                    width: 20px;
+                    height: 20px;
+                    background: url('../../images/eye.png') no-repeat;
+                    background-position: $__center;
+                    background-size: $__contain;
+                    position: $__absolute;
+                    top: 46px;
+                    right: 15px;
+                    cursor: $__pointer;
+                }
+                input{
+                    width: $__full__width;
+                    font-size: $__font__size__15;
+                    font-family: $__roboto__medium;
+                    padding: 15px 15px 15px 35px;
+                    border-radius: 25px;
+                    border: $__none;
+                    background-color: #e8e6ff;
+                    &:focus{
+                        outline: $__none;
+                    }
+                }
+            }
+            .reminder{
+                display: $__flex;
+                justify-content: $__flex_start;
+                    label{
+                        span{
+                            font-size: $__font__size__13;
+                            color: $__black;
+                            text-transform: $__capitalize;
+                        }
+                    }
+                    input[type="checkbox"]{
+                        width: $__inherit;
+                        cursor: $__pointer;
+                    }
+            }
+            .inline-form-btn{
+                padding-bottom: 15px;
+                text-align: $__right;
+                @include respond-below(custom767){
+                    text-align: $__center;
+                }
+                input[type="submit"]{
+                    font-size: $__font__size__16;
+                    font-family: $__roboto__medium;
+                    padding: 10px 25px;
+                    border: $__none;
+                    border-radius: 25px;
+                    cursor: $__pointer;
+                    color: $__white;
+                    background-image: linear-gradient(230deg, #6373bc 20%, #ce62b0 48%, #fc7b7f 100%);
+                }
+            }
+        }
+    }
+}
+.display-section{
+    background: url('../../images/display-bg.png') no-repeat;
+    background-position: $__left;
+    background-size: $__cover;
+    display: $__flex;
+    align-items: $__center;
+    flex-wrap: $__wrap;
+    flex: 0 0 50%;
+    text-align: $__center;
+    @include respond-below(custom1024){
+        flex: 0 0 45%;
+        padding-top: 30px;
+    }
+    @include respond-below(lg){
+        flex: 0 0 50%;
+    }
+    @include respond-below(custom767){
+        flex: 0 0 100%;
+        padding: 118px 0px 30px 0px;
+    }
+        .display-inner{
+            padding: 0px 15%;
+            @include respond-below(custom1024){
+                padding: 0px 5%;
+            }
+            @include respond-below(lg){
+                padding: 0px 5%;
+            }
+            @include respond-below(custom767){
+                padding: 0px 15px;
+            }
+            .heading{
+                font-size: $__font__size__50+10;
+                font-family: $__roboto__bold;
+                color: #fefefe;
+                text-transform: $__uppercase;
+                @include respond-below(custom1024){
+                    font-size: $__font__size__50;
+                }
+                @include respond-below(lg){
+                    font-size: $__font__size__40;
+                }
+                @include respond-below(custom767){
+                    font-size: $__font__size__30+5;
+                }
+            }
+            .welcome-note{
+                font-size: $__font__size__24;
+                color: #fefefe;
+                padding: 25px 0px;
+                @include respond-below(lg){
+                    font-size: $__font__size__20;
+                }
+                @include respond-below(custom767){
+                    font-size: $__font__size__18;
+                }
+            }
+        }
+}

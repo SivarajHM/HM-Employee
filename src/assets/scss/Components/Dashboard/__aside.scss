@@ -1,0 +1,66 @@
+    .aside-wrapper{
+        background-color: #4f5fb2;
+        width: 15%;
+        float: $__left;
+        height: $__full_height_window;
+      //  transition: 0.5s ease;
+        .left-aside-section{
+            .aside-container{
+                .side-section{
+                    padding: 0px 0px 50px 0px;
+                    .lists-wrapper{
+                        padding-top: 0px;
+                        .list-in{
+                            .main-list{
+                                li{
+                                    a{
+                                        display: $__flex;
+                                        align-items: $__center;
+                                        padding: 10px 25px;
+                                        text-decoration: $__none;
+                                        color: $__white;
+                                        white-space: nowrap;
+                                        transition: 0.5s ease;
+                                        .list-name{
+                                            display: $__flex;
+                                            font-size: $__font__size__15;
+                                            font-family: $__roboto__regular;
+                                            text-transform: $__capitalize;
+                                            font-weight: 600;
+                                            white-space: nowrap;
+                                        }
+                                        &:hover{
+                                            color:$__black;
+                                            background-color: $__list__bg;
+                                            box-shadow: 0px 0px 10px 0px rgba(25,23,23,0.75) ;
+                                            -webkit-box-shadow: 0px 0px 10px 0px rgba(25,23,23,0.75);
+                                            -moz-box-shadow: 0px 0px 10px 0px rgba(25,23,23,0.75) ;
+                                        }
+                                        .dashboard-icon{
+                                            display: $__inline__block;
+                                            width: 30px;
+                                            height: 30px;
+                                        }
+                                        .d-icon{
+                                            background: url('../../../images/dashboard.png') no-repeat;
+                                            background-position: $__center;
+                                            background-size: $__contain;
+                                        }
+                                    }
+                                    .sub-list-dropdown{
+                                        display: $__none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .toggle-aside{
+        width: 75px;
+    }
+    .hide{
+        display: $__none !important;
+    }

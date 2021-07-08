@@ -1,0 +1,170 @@
+.sign-container{
+    max-width: $__half__width;
+    margin: 0 $__auto;
+    padding: 5% 0px 0px 0px;
+    @include respond-below(custom1280){
+        max-width: $__half__width;
+    }
+    @include respond-below(custom1200){
+        max-width: 75%;
+    }
+    @include respond-below(lg){
+        max-width: 75%;
+    }
+    @include respond-below(custom767){
+        max-width: $__full__width;
+        padding: 0% 0px;
+    }
+        .sign-page-inner{
+            background-color: $__white;
+            padding: 50px;
+            @include respond-below(lg){
+                padding: 50px 15px;
+            }
+            .form-head{
+                margin-bottom: 30px;
+                @include respond-below(custom767){
+                    margin-bottom: 0;
+                }
+                h3{
+                    font-size: $__font__size__30+5;
+                    font-family: $__roboto__bold;
+                    text-transform: $__uppercase;
+                    font-weight: 700;
+                    text-align: $__center;
+                    padding: 15px 0px;
+                    color: #766ce7;
+                    @include respond-below(custom767){
+                        font-size: $__font__size__20+5;
+                    }
+                }
+            }
+            form{
+                overflow-y: $__scroll;
+                max-height: 350px;
+                scrollbar-width: $__none;
+                    &::-webkit-scrollbar {
+                        width: 0px;
+                    }                    
+                    &::-webkit-scrollbar-track {
+                        box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
+                    }
+                    
+                    &::-webkit-scrollbar-thumb {
+                        background-color: darkgrey;
+                        outline: 0px solid slategrey;
+                        border-radius: 25px;
+                    }
+                    @include respond-below(custom1280){
+                        padding: 50px 15px;
+                        max-height: 350px;
+                    }
+                    @include respond-below(lg){
+                        padding: 50px 25px;
+                        max-height: 10350px0vh;
+                    }
+                    @include respond-below(custom767){
+                        padding: 25px 15px;
+                        max-height: 100vh;
+                    }
+                .sign-form-wrapper{
+                    display: $__flex;
+                    width: $__full__width;
+                    justify-content: space-between;
+                    @include respond-below(custom767){
+                        display: $__block;
+                    }
+                        .inline-form{
+                            width: 45%;
+                            @include respond-below(custom767){
+                                width: $__full__width;
+                            }
+                        }
+                        select{
+                            width: $__full__width;
+                        }
+                }
+                .inline-form{
+                    padding-bottom: 25px;
+                    position: $__relative;
+                    label{
+                        display: $__block;
+                        padding-bottom: 15px;
+                        span{
+                            font-size: $__font__size__16;
+                            font-family: $__roboto__medium;
+                            text-transform: $__uppercase;
+                            color: #766ce7;
+                        }
+                    }
+                    select{
+                        appearance: $__none;
+                        padding: 15px 25px;
+                        font-size: $__font__size__15;
+                        font-family: $__roboto__medium;
+                        border-radius: 25px;
+                        border: $__none;
+                        background-color: #e8e6ff;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    input{
+                        width: $__full__width;
+                        font-size: $__font__size__15;
+                        font-family: $__roboto__medium;
+                        padding: 15px 15px 15px 35px;
+                        border-radius: 25px;
+                        border: $__none;
+                        background-color: #e8e6ff;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    .eye-icon{
+                        display: $__block;
+                        width: 20px;
+                        height: 20px;
+                        background: url('../../images/hide.png') no-repeat;
+                        background-position: $__center;
+                        background-size: $__contain;
+                        position: $__absolute;
+                        top: 46px;
+                        right: 15px;
+                        cursor: $__pointer;
+                    }
+                    .show{
+                        display: $__block;
+                        width: 20px;
+                        height: 20px;
+                        background: url('../../images/eye.png') no-repeat;
+                        background-position: $__center;
+                        background-size: $__contain;
+                        position: $__absolute;
+                        top: 46px;
+                        right: 15px;
+                        cursor: $__pointer;
+                    }
+                }
+                .sign{
+                    input{
+                        padding-left: 20px;
+                    }
+                }
+                .inline-form-btn{
+                    padding-bottom: 15px;
+                    text-align: $__center;
+                    input[type="submit"]{
+                        font-size: $__font__size__16;
+                        font-family: $__roboto__medium;
+                        padding: 10px 25px;
+                        border: none;
+                        border-radius: 25px;
+                        cursor: $__pointer;
+                        color: $__white;
+                        background-image: linear-gradient(230deg, #6373bc 20%, #ce62b0 48%, #fc7b7f 100%);
+                    }
+                }
+            }
+        }
+}
