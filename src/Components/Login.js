@@ -1,13 +1,15 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-
+import {
+    Link
+  } from "react-router-dom";
 export default function Login(){
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
 
     const showPassword = (event) => {
         var password = document.getElementById("password");
-        const _type = password.getAttribute("type") === "password" ? "text" : "password";
+        const _type = password.getAttribute("type") === " password" ? "text" : "password";
         password.setAttribute("type",_type);
         event.target.classList.toggle("show");
     }
@@ -21,14 +23,14 @@ export default function Login(){
                     </div>
                     <form onSubmit={handleSubmit(onSubmit)} method="POST" action="" >
                         <div className="inline-form">
-                            <label for="username">
+                            <label htmlFor="username">
                                 <span>username</span>
                             </label>
                             <span className="login-icons user"></span>
                             <input id="username" {...register("username")} placeholder="Enter Username" name="username" />
                         </div>
                         <div className="inline-form">
-                            <label for="password">
+                            <label htmlFor="password">
                                 <span>Password</span>
                             </label>
                             <span className="login-icons password"></span>
@@ -38,7 +40,7 @@ export default function Login(){
                         </div>
                         <div className="inline-form reminder">
                         <input name="reminderme" type="checkbox" {...register('reminderme')} id="reminderme" className={`form-check-input ${errors.reminderme ? 'is-invalid' : ''}`} />
-                            <label for="reminderme">
+                            <label htmlFor="reminderme">
                                 <span>Reminder Me</span>
                             </label>
                         </div>
@@ -46,6 +48,9 @@ export default function Login(){
                             <input type="submit" name="submit" value="Login" />
                         </div>
                     </form>
+                    <div className="signin-link">
+                        <Link to="/sign">Sign-In</Link>
+                    </div>
                 </section>
             </div>
         </div>

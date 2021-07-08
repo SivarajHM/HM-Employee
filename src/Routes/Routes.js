@@ -14,7 +14,10 @@ import Dashboard from '../Page/Dashboard';
         <Router>
           <Header />
           <Switch>
-            <div>
+            <div className="react-page-wrapper">
+            <Route path="/" exact component={Loginpage}>
+                <Loginpage />
+              </Route>
               <Route path="/login" exact component={Loginpage}>
                 <Loginpage />
               </Route>

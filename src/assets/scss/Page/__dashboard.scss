@@ -12,6 +12,15 @@
                 width: 85%;
                 margin-left: $__auto;
                 transition: 0.5s ease;
+                @include respond-below(custom1400){
+                    width: 82%;
+                }
+                @include respond-below(custom1200){
+                    width: 79%;
+                }
+                @include respond-below(custom992){
+                    width: 100%;
+                }
             }
             &::after{
                 content: "";
@@ -20,6 +29,12 @@
             }
             .dashboard-full{
                 width: 95%;
+                @include respond-below(custom1400){
+                    width: 94%;
+                }
+                @include respond-below(custom1200){
+                    width: 92.5%;
+                }
             }
         }
     }

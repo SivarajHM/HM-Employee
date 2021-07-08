@@ -1,9 +1,24 @@
     .aside-wrapper{
-        background-color: #4f5fb2;
+        background-color:$__navi__drag;
         width: 15%;
         float: $__left;
         height: $__full_height_window;
-        transition: 0.5s ease;
+        position: $__absolute;
+        top: 80px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: $__hidden;
+        transition: .5s ease;
+        @include respond-below(custom1400){
+            width: 18%;
+        }
+        @include respond-below(custom1200){
+            width: 21%;
+        }
+        @include respond-below(custom992){
+            width: 0;
+        }
         .left-aside-section{
             .aside-container{
                 .side-section{
@@ -13,13 +28,16 @@
                         .list-in{
                             .main-list{
                                 li{
+                                    white-space: $__nowrap;
+                                    position: $__relative;
                                     a{
                                         display: $__flex;
                                         align-items: $__center;
-                                        padding: 10px 25px;
+                                        padding: 18px 25px;
+                                        position: $__relative;
                                         text-decoration: $__none;
                                         color: $__white;
-                                        white-space: nowrap;
+                                        white-space: $__nowrap;
                                         transition: 0.5s ease;
                                         .list-name{
                                             display: $__flex;
@@ -27,28 +45,49 @@
                                             font-family: $__roboto__regular;
                                             text-transform: $__capitalize;
                                             font-weight: 600;
-                                            white-space: nowrap;
+                                            white-space: $__nowrap;
+                                            line-height: 20px;
+                                            padding-left: 15px;
+                                            color: $__white;
+                                        }
+                                        .dashboard-icon{
+                                            font-size: $__font__size__20+5;
+                                            display: $__block;
+
+                                        }
+                                        &:hover .list-name, &:hover .dashboard-icon{
+                                            color:$__navi__drag;
+                                           
                                         }
                                         &:hover{
-                                            color:$__black;
-                                            background-color: $__list__bg;
+                                            background-color: $__white;
                                             box-shadow: 0px 0px 10px 0px rgba(25,23,23,0.75) ;
                                             -webkit-box-shadow: 0px 0px 10px 0px rgba(25,23,23,0.75);
                                             -moz-box-shadow: 0px 0px 10px 0px rgba(25,23,23,0.75) ;
                                         }
-                                        .dashboard-icon{
-                                            display: $__inline__block;
-                                            width: 30px;
-                                            height: 30px;
-                                        }
-                                        .d-icon{
-                                            background: url('../../../images/dashboard.png') no-repeat;
-                                            background-position: $__center;
-                                            background-size: $__contain;
+                                        
+                                    }
+                                    .drop-down-icons{
+                                        position: $__absolute;
+                                        color: $__white;
+                                        top: 25px;
+                                        right: 25px;
+                                        &:hover{
+                                            color:$__navi__drag;
                                         }
                                     }
                                     .sub-list-dropdown{
-                                        display: $__none;
+                                        position: $__relative;
+                                        bottom: 100%;
+                                        left: 0;
+                                        right: 0;
+                                        background-color: #008CBA;
+                                        overflow: hidden;
+                                        width: 100%;
+                                        height:0;
+                                    }
+                                    &:hover .drop-down-icons{
+                                        color:$__navi__drag;
                                     }
                                 }
                             }
@@ -60,7 +99,30 @@
     }
     .toggle-aside{
         width: 75px;
+        @include respond-below(custom1200){
+            width: 75px;
+        }
+        @include respond-below(custom992){
+            width: 50%;
+        }
+        @include respond-below(custom767){
+            width: 75%;
+        }
     }
     .hide{
+        //display: $__none !important;
+        opacity: 0;
+        @include respond-below(custom992){
+            opacity: 1;
+        }
+    }
+    .hide-arrow{
         display: $__none !important;
+        @include respond-below(custom992){
+            display: $__block !important;
+        }
+    }
+    .drop-down-overley{
+        bottom: 0 !important;
+        height: 100% !important;
     }

@@ -4,24 +4,26 @@ header{
     padding: 15px 15px;
     width: $__full__width;
     //position: $__fixed;
-    background-color: #4f5fb2;
+    background-color:$__navi__drag;
     z-index: 1000;
     .header-fx{
         display: $__flex;
         align-items: $__center;
-        a{
-            margin:  0px 25px;
-            display: $__block;
-            text-decoration: $__none;
-            font-size: $__font__size__15;
-            font-family: $__roboto__regular;
-            color: $__white;
-        }
+        justify-content: space-between;
         .logo-section{
             display: $__flex;
             justify-content: space-between;
             align-items: $__center;
             width: 16%;
+            @include respond-below(custom1400){
+                width: 19%;
+            }
+            @include respond-below(custom1200){
+                width: 20%;
+            }
+            @include respond-below(custom992) {
+                width: 100%;
+            }
                 a{
                     display: $__block;
                     height: 50px;
@@ -38,6 +40,19 @@ header{
                     background-size: $__contain;
                     cursor: $__pointer;
                 }
+        }
+        .nav-outlink{
+            @include respond-below(custom992) {
+                display: $__none;
+            }
+            .outlinks{
+                margin:  0px 25px;
+                display: $__inline__block;
+                text-decoration: $__none;
+                font-size: $__font__size__15;
+                font-family: $__roboto__regular;
+                color: $__white;
+            }
         }
     }
 }
