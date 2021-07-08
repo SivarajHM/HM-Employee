@@ -1,25 +1,25 @@
 /****** UTILS ******/
-@import "Utils/_variables";
-@import "Utils/__mixins";
-@import "Utils/__rtl";
+@import "./Utils/_variables";
+@import "./Utils/__mixins";
+@import "./Utils/__rtl";
 
 /******* BASE *******/
-@import "Base/__reset";
-@import "Base/_typography";
-@import "Base/__colors"; 
-@import "Base/__base";
-@import "Base/__grid";
+@import "./Base/__reset";
+@import "./Base/_typography";
+@import "./Base/__colors"; 
+@import "./Base/__base";
+@import "./Base/__grid";
 
 /******* COMPONENT *******/
-@import "Components/_login_field";
-@import "Components/_sign";
-@import "Components/_header";
+@import "./Components/_login_field";
+@import "./Components/_sign";
+@import "./Components/_header";
 
     /******* DASHBOARD ********/
-    @import "Components/Dashboard/_aside";
+    @import "./Components/Dashboard/_aside";
 
 /******* PAGES *******/
-@import "Page/_custom";
-@import "Page/_login";
-@import "Page/_signpage";
-@import "Page/_dashboard";
+@import "./Page/_custom";
+@import "./Page/_login";
+@import "./Page/_signpage";
+@import "./Page/_dashboard";
